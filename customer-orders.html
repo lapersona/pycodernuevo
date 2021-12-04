@@ -209,7 +209,6 @@
                         <th class="border-gray-300 border-top py-3">Producto</th>
                         <th class="border-gray-300 border-top py-3">Cantidad</th>
                         <th class="border-gray-300 border-top py-3">Precio</th>
-                        <th class="border-gray-300 border-top py-3">Elim.</th>
                       </tr>
                     </thead>
                     <tbody id="carritoTbody" class="align-middle py-3"></tbody>
@@ -238,20 +237,16 @@
                     <table class="table mb-0">
                       <tbody class="text-sm">
                         <tr>
-                          <th class="text-muted"> <span class="d-block py-1 fw-normal">Subtotal</span></th>
-                          <th> <span class="d-block py-1 fw-normal text-end">$446.00</span></th>
-                        </tr>
-                        <tr>
                           <th class="text-muted"> <span class="d-block py-1 fw-normal">Envio</span></th>
-                          <th> <span class="d-block py-1 fw-normal text-end">$10.00</span></th>
+                          <th> <span class="d-block py-1 fw-normal text-end">$0.00</span></th>
                         </tr>
                         <tr>
                           <th class="text-muted"> <span class="d-block py-1 fw-normal">Impuestos</span></th>
                           <th> <span class="d-block py-1 fw-normal text-end">$0.00</span></th>
                         </tr>
                         <tr class="total">
-                          <td class="py-3 border-bottom-0 text-muted"> <span class="lead fw-bold">Total</span></td>
-                          <th class="py-3 border-bottom-0"> <span class="lead fw-bold text-end">$456.00</span></th>
+                          <td class="py-3 border-bottom-0 text-muted"><span class="lead fw-bold">Total</span></td>
+                          <th class="py-3 border-bottom-0">$<span class="lead fw-bold text-end" id="totalCompraGral"></span></th>
                         </tr>
                       </tbody>
                     </table>
@@ -280,7 +275,7 @@
     <script src="vendor/waypoints/lib/noframework.waypoints.js"></script>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/choices.js/public/assets/scripts/choices.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/carrito.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </body>
 </html>

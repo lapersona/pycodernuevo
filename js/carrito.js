@@ -1,31 +1,3 @@
-let user = "";
-let pass = "";
-let error = $(".error");
-let welcome = $(".welcome");
-
-$("#btnIngreso").click(function (e){
-    e.preventDefault();
-    let userUserLogin = $("#email_modal").val();
-    let passUserLogin = $("#password_modal").val();
-    for (let i = 0 ; i < localStorage.length ; i++){
-        user = localStorage.key(i);
-        pass = localStorage.getItem(user);
-            if (user === userUserLogin && pass === passUserLogin){
-                welcome.html("Bienvenido, " + userUserLogin + ".");
-                $("#btnIngreso").slideUp(800);
-                setTimeout(redirectIndex, 1000);
-                break;
-            }
-        }
-    if ( userUserLogin === "admin" && passUserLogin === "admin"){
-        welcome.html("Bienvenido ADMIN, accediendo al panel de control.");
-        $("#btnIngreso").slideUp(800);
-        setTimeout(redirect, 3000);
-    }   
-    else if (user != userUserLogin && pass != passUserLogin){
-        error.html("Datos incorrectos, reintente.").delay(2000).slideUp(400);
-    }
-})
 
 $("#carrito").hide();
 
@@ -47,15 +19,23 @@ function redirectIndex(){
 
 const carrito = document.querySelector('#carrito');
 const contenedorCarrito = $("#lista-carrito tbody");
+const vaciarCarritoBtn = document.querySelector('#boton-vaciar');
 const listaProductos = $("#listaProductos");
 let productosCarrito = [];
+var totalCompra = 0;
 
 $(".agregar-carrito").click(agregarCarrito);
 carrito.addEventListener('click' , eliminaProd);
+vaciarCarritoBtn.addEventListener('click' , vaciaCarrito);
 document.addEventListener('DOMContentLoaded', () => {
 
     productosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    productosCarrito.forEach(function(prod) {
+        totalCompra += parseInt(prod.precio);
+    });
     carritoHtml();
+    total = document.getElementById("totalCompraGral");
+    total.innerHTML = `${totalCompra}`;
 
 })
 
@@ -127,9 +107,6 @@ function carritoHtml() {
             <td>${prod.titulo}</td>
             <td>${prod.cantidad}</td>
             <td><span>$</span>${prod.precio}</td>
-            <td>
-                <a href="#" class="borrarProd" data-id="${prod.id}"> X </a>
-            </td>
         `;
         //AGREGA HTML AL TBODY
         contenedorCarrito.append(row);
@@ -148,17 +125,3 @@ function limpiarHTML() {
     const listaProd = document.getElementById("carritoTbody");
     listaProd.innerHTML = ` `;
 }
-
-function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
-          }
-      }
-injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 

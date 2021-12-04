@@ -12,6 +12,10 @@
     z-index:999;
 }
 
+#pesos {
+    position: relative;
+}
+
 .error {
     color: red;
     font-family: 'Courier New', Courier, monospace;
