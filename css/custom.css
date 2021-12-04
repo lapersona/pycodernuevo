@@ -65,7 +65,7 @@
     line-height: 12px;
     text-align:center;
     z-index: 1;
-    width: 25%;
+    width: 40%;
     background-color: #555555;
     border-radius: 2px;
     padding: 5px 2px 5px 2px;
@@ -77,4 +77,20 @@
         display: none;
     
     }
+
+    .carrito {
+        font-size: 8px;
+        display: block;
+        position: absolute;
+        left:1px;
+        top: 7%;
+        line-height: 12px;
+        text-align:center;
+        z-index: 1;
+        width: 80%;
+        background-color: #555555;
+        border-radius: 2px;
+        padding: 5px 50px 5px 0px;
+    }
+
 }
