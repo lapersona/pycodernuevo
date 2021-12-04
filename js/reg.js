@@ -1,10 +1,12 @@
 function redirect(){
-    window.location.replace("../vendor/index.html");
+    window.location.replace("../pycodernuevo/index.html");
 }
 
 function redirectIndex(){
-    window.location.replace("../vendor/index.html");
+    window.location.replace("../pycodernuevo/index.html");
 }
+$("#carrito").hide();
+
 
 let user = "";
 let pass = "";
@@ -12,6 +14,7 @@ let error = $(".error");
 let welcome = $(".welcome");
 
 $("#btnIngreso").click(function (e){
+    console.log(e);
     e.preventDefault();
     let userUserLogin = $("#email_modal").val();
     let passUserLogin = $("#password_modal").val();
@@ -35,27 +38,37 @@ $("#btnIngreso").click(function (e){
     }
 })
 
-
 var mensaje = $(".mensaje");
-var userInfo = {nombre: $("newNombre").val(), apellido: $("#newApellido").val(), dni: $("#newDni").val(), email: $("#newEmail").val(), user: $("#newUsuario").val(), pass: $("#newPassword").val()};
-
 
 $("#btnRegistro").click(function (e){
     e.preventDefault();
-    newUserName = $("#newNombre").val();
-    newUserApellido = $("#newApellido").val();
-    newUserDni = $("#newDni").val();
-    newUserEmail = $("#newEmail").val();
-    newUserUser = $("#newUsuario").val();
-    newUserPass = $("#newPassword").val();
+    newUserName = $("#username").val();
+    newUserEmail = $("#useremail").val();
+    newUserPass = $("#userpassword").val();
 
-    let opcion = confirm("Confirma el registro del usuario " + newUserUser + "?");
+    let opcion = confirm("Confirma el registro del usuario " + newUserName + "?");
 
     if (opcion == true){
-        localStorage.setItem (newUserUser , newUserPass)
+        localStorage.setItem (newUserEmail , newUserPass)
         mensaje.html("Registro completado correctamente, redireccionando..");
         $
         setTimeout (redirectIndex , 3000);
     }
     else (mensaje.html("Complete el registro nuevamente."));
 })
+
+
+
+function injectSvgSprite(path) {
+      
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", path, true);
+    ajax.send();
+    ajax.onload = function(e) {
+    var div = document.createElement("div");
+    div.className = 'd-none';
+    div.innerHTML = ajax.responseText;
+    document.body.insertBefore(div, document.body.childNodes[0]);
+    }
+}
+injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 

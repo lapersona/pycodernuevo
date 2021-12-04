@@ -21,9 +21,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    
   </head>
   <body>
     <div class="wide" id="all">
@@ -36,14 +34,11 @@
             </div>
             <div class="col-md-6">
               <div class="d-flex justify-content-md-end justify-content-between">
-                <ul class="list-inline d-block d-md-none mb-0">
-                  <li class="list-inline-item"><a class="text-xs" href="#"><i class="fa fa-phone"></i></a></li>
-                  <li class="list-inline-item"><a class="text-xs" href="#"><i class="fa fa-envelope"></i></a></li>
-                </ul>
+                
                 <ul class="list-inline mb-0">
                   <li class="list-inline-item"><a class="text-xs text-uppercase fw-bold text-reset" href="#" data-bs-toggle="modal" data-bs-target="#login-modal"><i class="fas fa-door-open me-2"></i><span class="d-none d-md-inline-block">Ingresar</span></a></li>
-                  <li class="list-inline-item"><a class="text-xs text-uppercase fw-bold text-reset" href="customer-register.html"><i class="fas fa-user me-2"></i><span class="d-none d-md-inline-block">Crear Cuenta</span></a></li>
-                  <li class="list-inline-item"><a class="text-xs text-uppercase fw-bold text-reset" id="carroLogo" href="#"><i class="fas fa-cart-arrow-down me-2"></i><span class="d-none d-md-inline-block" >Carrito</span></a></li>
+                  <li class="list-inline-item"><a class="text-xs text-uppercase fw-bold text-reset" href="customer-orders.html"><i class="fas fa-user me-2"></i><span class="d-none d-md-inline-block">Mi Cuenta</span></a></li>
+                  <li class="list-inline-item"><a class="text-xs text-uppercase fw-bold text-reset" id="carroLogo" href="customer-orders.html"><i class="fas fa-cart-arrow-down me-2"></i><span class="d-none d-md-inline-block" >Carrito</span></a></li>
                 </ul>
                 <ul class="list-inline mb-0 ms-lg-4">
                   <li class="list-inline-item text-gray-600 m-0"><a class="text-xs social-link-hover" href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -68,15 +63,15 @@
             <div class="modal-body">
               <form action="customer-orders.html" method="get">
                 <div class="form-group mb-3">
-                  <input class="form-control" id="email_modal" type="text" placeholder="email">
+                  <input class="form-control" type="text" placeholder="email">
                 </div>
                 <div class="form-group mb-3">
-                  <input class="form-control" id="password_modal" type="password" placeholder="password">
+                  <input class="form-control" type="password" placeholder="password">
                 </div>
                 <p class="welcome text-center text-success small"></p>
 			          <p class="error text-center text-truncate small"></p>
                 <p class="text-center">
-                  <button class="btn btn-outline-primary" id="btnIngreso"><i class="fas fa-door-open"></i> Log in</button>
+                  <button class="btn btn-outline-primary"><i class="fas fa-door-open"></i> Log in</button>
                 </p>
               </form>
               <p class="text-center text-muted small">No estas registrado?</p>
@@ -91,9 +86,9 @@
         <div class="navbar navbar-light bg-white navbar-expand-lg py-0" id="navbar">
           <div class="container py-3 py-lg-0 px-lg-0">
             <!-- Navbar brand-->
-            <a class="navbar-brand" href="index.html" ><img class="d-none d-md-inline-block" src="img/logo.jpg" alt="logo" style="height: 42px; width: 42px;"><img class="d-inline-block d-md-none" src="img/logo-small.png" alt="Universal logo"><span class="sr-only">Go to homepage</span></a>
+            <a class="navbar-brand" href="index.html" ><img class="d-none d-md-inline-block" src="img/logo.png" alt="logo"><img class="d-inline-block d-md-none" src="img/logo-small.png" alt="logo"><span class="sr-only">Homepage</span></a>
             <!-- Navbar toggler-->
-            <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Toggle navigation</span><i class="fas fa-align-justify"></i></button>
+            <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Ver</span><i class="fas fa-align-justify"></i></button>
             <!-- Collapsed Navigation    -->
             <div class="collapse navbar-collapse" id="navigationCollapse">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -198,10 +193,10 @@
                 <p class="lead">No tenes tu cuenta todavia?</p>
               </header>
               <p>Registrate y accede a todo el contenido de nuestra web y realiza tus compras!</p>
-              <p class="text-muted mb-4">Si tenes alguna pregunta, envianos un mensaje en nuestra seccion de <a href="#">contacto</a>, nos pondremos en contacto inmediatamente.</p>
+              <p class="text-muted mb-4">Si tenes alguna pregunta, envianos un mensaje en nuestra seccion de <a href="contact.html">contacto</a>, nos pondremos en contacto inmediatamente.</p>
               <hr class="border-gray-200">
               <!-- REGISTER FORM-->
-              <form action="customer-orders.html">
+              <form>
                 <div class="form-group mb-3">
                   <label class="form-label" for="username"></label>
                   <input class="form-control" id="username" type="text" name="username" placeholder="Nombre completo">
@@ -215,7 +210,8 @@
                   <input class="form-control" id="userpassword" type="text" name="userpassword" placeholder="Password">
                 </div>
                 <div class="form-group mb-3 text-center">
-                  <button class="btn btn-outline-primary" type="submit"><i class="fas fa-user me-2"></i>Registrar</button>
+                  <p class="mensaje text-center text-success small"></p>
+                  <button class="btn btn-outline-primary" id="btnRegistro"><i class="fas fa-user me-2"></i>Registrar</button>
                 </div>
               </form>
             </div>
@@ -229,7 +225,7 @@
               <hr class="border-gray-200">
               <!-- LOGIN FORM-->
               <div class="modal-body">
-                <form action="customer-orders.html" method="get">
+                <form>
                   <div class="form-group mb-3">
                     <input class="form-control" id="email_modal" type="text" placeholder="email">
                   </div>
@@ -238,9 +234,11 @@
                   </div>
                   <p class="welcome text-center text-success small"></p>
                   <p class="error text-center text-truncate small"></p>
-                  <p class="text-center">
-                    <button class="btn btn-outline-primary" id="btnIngreso"><a class="fas fa-door-open"></a> Log in</button>
+                  <div class="form-group mb-3 text-center">
+                  <p class="text-center text-success small">
+                    <button class="btn btn-outline-primary" id="btnIngreso"><i class="fas fa-door-open"></i> Log in</button>
                   </p>
+                  </div>
                 </form>
               </div>
             </div>
@@ -249,62 +247,9 @@
       </section>
       <footer>
         <!-- MAIN FOOTER-->
-        <div class="bg-gray-700 text-white py-4 ">
-          <div class="container py-4">
-            <div class="row gy-2">
-              <div class="col-lg-2">
-                <h4 class="mb-3 text-uppercase">About Us</h4>
-                <p class="text-sm text-gray-500">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                <hr>
-                <h4 class="h6 text-uppercase">Join Our Monthly Newsletter</h4>
-                <form>
-                  <div class="input-group border mb-3">
-                    <input class="form-control bg-none border-0 shadow-0 text-white" type="email" placeholder="Email address" aria-label="Email address" aria-describedby="button-submit">
-                    <button class="btn btn-outline-light bg-none border-0" id="button-submit" type="button"><i class="fas fa-paper-plane"></i></button>
-                  </div>
-                </form>
-              </div>
-              <div class="col-lg-3">
-                <h4 class="mb-3 text-uppercase">Blog</h4>
-                <ul class="list-unstyled">
-                  <li class="d-flex align-items-center mb-2"><a href="blog-post.html"><img class="img-fluid" src="img/detailsquare.jpg" alt="..." width="40"></a>
-                    <div class="ms-2">
-                      <h6 class="text-uppercase mb-0"> <a class="text-reset" href="blog-post.html">Blog post name</a></h6>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-2"><a href="blog-post.html"><img class="img-fluid" src="img/detailsquare.jpg" alt="..." width="40"></a>
-                    <div class="ms-2">
-                      <h6 class="text-uppercase mb-0"> <a class="text-reset" href="blog-post.html">Blog post name</a></h6>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-2"><a href="blog-post.html"><img class="img-fluid" src="img/detailsquare.jpg" alt="..." width="40"></a>
-                    <div class="ms-2">
-                      <h6 class="text-uppercase mb-0"> <a class="text-reset" href="blog-post.html">Very very long blog post name</a></h6>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-3">
-                <h4 class="mb-3 text-uppercase">Contact</h4>
-                <p class="text-uppercase text-sm text-gray-500"><strong>Universal Ltd.</strong><br>13/25 New Avenue <br>Newtown upon River <br>45Y 73J <br>England <br><strong>Great Britain</strong></p><a class="btn btn-primary" href="contact.html">Go to contact page</a>
-              </div>
-              <!--<div class="col-lg-3">
-                <ul class="list-inline mb-0">
-                  <li class="list-inline-item mb-2 me-2 pb-1"><a href="#"><img class="img-fluid" src="img/detailsquare.jpg" alt="..." width="70"></a></li>
-                  <li class="list-inline-item mb-2 me-2 pb-1"><a href="#"><img class="img-fluid" src="img/detailsquare2.jpg" alt="..." width="70"></a></li>
-                  <li class="list-inline-item mb-2 me-2 pb-1"><a href="#"><img class="img-fluid" src="img/detailsquare3.jpg" alt="..." width="70"></a></li>
-                  <li class="list-inline-item mb-2 me-2 pb-1"><a href="#"><img class="img-fluid" src="img/detailsquare3.jpg" alt="..." width="70"></a></li>
-                  <li class="list-inline-item mb-2 me-2 pb-1"><a href="#"><img class="img-fluid" src="img/detailsquare2.jpg" alt="..." width="70"></a></li>
-                  <li class="list-inline-item mb-2 me-2 pb-1"><a href="#"><img class="img-fluid" src="img/detailsquare.jpg" alt="..." width="70"></a></li>
-                </ul>
-              </div>-->
-            </div>
-          </div>
-        </div>
-        <!-- COPYRIGHTS                -->
         <div class="bg-dark py-3">
           <div class="container">
-            <div class="row align-items-cenrer gy-3 text-center">
+            <div class="row align-items-center gy-3 text-center">
               <div class="col-md-6 text-md-start">
                 <p class="mb-0 text-sm text-gray-500">&copy; 2021. D E L T R E E H A R D</p>
               </div>
@@ -318,33 +263,7 @@
     <script src="vendor/waypoints/lib/noframework.waypoints.js"></script>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/choices.js/public/assets/scripts/choices.js"></script>
-    <script src="js/theme.js"></script>
-    <script>
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
-          }
-      }
-      // this is set to BootstrapTemple website as you cannot 
-      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-      // while using file:// protocol
-      // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-      
-    </script>
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <script src="js/reg.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </body>
 </html>

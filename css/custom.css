@@ -52,7 +52,7 @@
     height: 50px;
 }
   
-#carrito {
+.carrito {
     font-size: 12px;
     display: block;
     position: absolute;

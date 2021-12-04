@@ -39,7 +39,7 @@ function redirect(){
 }
 
 function redirectIndex(){
-    window.location.replace("../index.html");
+    window.location.replace("../pycodernuevo/index.html");
 }
 
 
@@ -130,7 +130,7 @@ function carritoHtml() {
             <td>${prod.cantidad}</td>
             <td>${prod.precio}</td>
             <td>
-                <a href="#" class="borrarProd" data-id="${prod.id}"> X </a>
+                <a class="borrarProd" data-id="${prod.id}"> X </a>
             </td>
         `;
         //AGREGA HTML AL TBODY
