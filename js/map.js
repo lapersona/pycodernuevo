@@ -1,7 +1,3 @@
-// ------------------------------------------------------- //
-//  Styled Leaflet Map
-// ------------------------------------------------------ //
-
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
