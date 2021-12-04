@@ -19,14 +19,12 @@ function redirectIndex(){
 
 const carrito = document.querySelector('#carrito');
 const contenedorCarrito = $("#lista-carrito tbody");
-const vaciarCarritoBtn = document.querySelector('#boton-vaciar');
 const listaProductos = $("#listaProductos");
 let productosCarrito = [];
 var totalCompra = 0;
 
 $(".agregar-carrito").click(agregarCarrito);
 carrito.addEventListener('click' , eliminaProd);
-vaciarCarritoBtn.addEventListener('click' , vaciaCarrito);
 document.addEventListener('DOMContentLoaded', () => {
 
     productosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -68,7 +66,7 @@ function buscaDatos(prod){
     const datoProd = {
         imagen: prod.querySelector('img').src,
         titulo: prod.querySelector('h4').textContent,
-        precio: prod.querySelector('.price-mob').textContent,
+        precio: prod.querySelector('.price-mob').val(),
         id: prod.querySelector('a').getAttribute('data-id'),
         cantidad: 1,
     }
