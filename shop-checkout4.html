@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.css">
     <!-- Theme stylesheet-->
     <link rel="stylesheet" href="css/style.blue.css" id="theme-stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon and apple touch icons-->
@@ -33,7 +34,7 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body>
+  <body >
     <div class="wide" id="all">
       <!-- Top bar-->
       <div class="top-bar py-2" id="topBar" style="background: #555">
@@ -173,6 +174,7 @@
     </table><br>
     <button id="boton-vaciar" class="btn btn-primary btn--animate animate__animated botonVaciar">Vaciar Carrito</button>
   </aside>
+  <div id="bdy">
             <!-- HEADING BREADCRUMB-->
             <section class="bg-pentagon py-4">
               <div class="container py-3">
@@ -227,7 +229,7 @@
                 <div class="row">
                   <div class="col-md-6 text-md-start py-1"><a class="btn btn-secondary my-1" href="shop-checkout3.html"><i class="fas fa-angle-left me-1"></i>volver</a></div>
                   <div class="col-md-6 text-md-end py-1">
-                    <a class="btn btn-secondary my-1" href="index.html"><i class="fas fa-angle-right me-1"></i>finalizar</a>                  </div>
+                    <a class="btn btn-secondary my-1" id="finalizaCompra"><i class="fas fa-angle-right me-1"></i>finalizar</a>                  </div>
                 </div>
               </div>
             </div>
@@ -263,6 +265,7 @@
           </div>
         </div>
       </section>
+    </div>
       <footer>
         <!-- MAIN FOOTER-->
         <div class="bg-dark py-3">

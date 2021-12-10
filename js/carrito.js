@@ -22,7 +22,10 @@ const contenedorCarrito = $("#lista-carrito tbody");
 const listaProductos = $("#listaProductos");
 let productosCarrito = [];
 var totalCompra = 0;
+let body = $("#bdy");
+let msj = $("#msjFinal");
 
+$("#finalizaCompra").click(endBuy);
 $(".agregar-carrito").click(agregarCarrito);
 carrito.addEventListener('click' , eliminaProd);
 document.addEventListener('DOMContentLoaded', () => {
@@ -122,4 +125,10 @@ function sincronizarStorage(){
 function limpiarHTML() {
     const listaProd = document.getElementById("carritoTbody");
     listaProd.innerHTML = ` `;
+}
+
+function endBuy (){
+    body.addClass("blr");
+    swal("COMPRA FINALIZADA", "Su compra fue realizada con exito! Gracias!", "success");
+    setTimeout (redirectIndex , 3000);
 }
