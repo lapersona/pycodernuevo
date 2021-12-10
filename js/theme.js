@@ -3,6 +3,7 @@ let pass = "";
 let error = $(".error");
 let welcome = $(".welcome");
 
+
 $("#btnIngreso").click(function (e){
     e.preventDefault();
     let userUserLogin = $("#email_modal").val();
@@ -64,9 +65,10 @@ function vaciaCarrito() {
     limpiarHTML();
 }
 
-
 function agregarCarrito (e){
     e.preventDefault();
+    swal("Producto agregado al Carrito", "Continuar comprando", "success");
+
     if (e.target.classList.contains("agregar-carrito")){
         const prodSelect = e.target.parentElement.parentElement;
         buscaDatos(prodSelect);

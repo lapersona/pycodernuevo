@@ -72,28 +72,10 @@
 .blr {
     filter: blur(2px);
 }
-.msjFinal {
 
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 20px;
-    position: absolute;
-    top: 50%;
-    z-index: 100;
-    left: 40%;
-    width: 300px;
-    box-shadow: 0 1px 10px #666;
-    background: -moz-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(1%, #e09013), color-stop(100%, #e5b300));
-    background: -webkit-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
-    background: -o-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
-    background: -ms-linear-gradient(top, #1e5799 0%, #e09013 1%, #e5b300 100%);
-    background: linear-gradient(to bottom, #1e5799 0%, #e09013 1%, #e5b300 100%);
-
-    
-
-}
+#recaptcha > div {
+    margin: 0 auto .5em;
+  }  
 
 .carrito {
     font-size: 12px;

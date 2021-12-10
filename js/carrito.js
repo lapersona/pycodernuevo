@@ -129,6 +129,12 @@ function limpiarHTML() {
 
 function endBuy (){
     body.addClass("blr");
-    swal("COMPRA FINALIZADA", "Su compra fue realizada con exito! Gracias!", "success");
-    setTimeout (redirectIndex , 3000);
+    swal("REALIZANDO COMPRA", "Enviando datos..", "info");
+    setTimeout (msjFinal , 3000);
 }
+
+function msjFinal (){
+    swal("COMPRA FINALIZADA", "Su compra fue realizada con exito! Redirigiendo al inicio..", "success");
+    setTimeout (redirectIndex , 4000);
+}
+
