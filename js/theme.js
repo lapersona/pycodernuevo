@@ -68,7 +68,6 @@ function vaciaCarrito() {
 function agregarCarrito (e){
     e.preventDefault();
     swal("Producto agregado al Carrito", "Continuar comprando", "success");
-
     if (e.target.classList.contains("agregar-carrito")){
         const prodSelect = e.target.parentElement.parentElement;
         buscaDatos(prodSelect);
@@ -90,7 +89,7 @@ function buscaDatos(prod){
     const datoProd = {
         imagen: prod.querySelector('img').src,
         titulo: prod.querySelector('h4').textContent,
-        precio: prod.querySelector('.price-mob').textContent,
+        precio: prod.querySelector('.price-mob').textContent.replace("$",""),
         id: prod.querySelector('a').getAttribute('data-id'),
         cantidad: 1,
     }
@@ -122,6 +121,7 @@ function carritoHtml() {
     limpiarHTML();
 
     productosCarrito.forEach( prod => {
+        
         
         const row = document.createElement('tr');
         row.innerHTML = `
